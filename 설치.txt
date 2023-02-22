@@ -3,3 +3,10 @@ https://nodejs.org/download/release/v16.18.1/
 
 ** vs code
 https://code.visualstudio.com/Download
+
+** mariaDB 10.11.1 RC 버전 설치
+https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.11.1&os=windows&cpu=x86_64&pkg=msi&m=blendbyte
+
+mac:
+https://wonpaper.tistory.com/399
+https://sequelpro.com/download  (참고:https://wordpress-tip.tistory.com/3)
