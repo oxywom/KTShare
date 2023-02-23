@@ -10,3 +10,10 @@ https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.11.1&os=windows&cpu=x86_6
 mac:
 https://wonpaper.tistory.com/399
 https://sequelpro.com/download  (참고:https://wordpress-tip.tistory.com/3)
+
+CREATE TABLE ACCOUNT(
+id VARCHAR(30) PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+balance INTEGER DEFAULT 0,
+type VARCHAR(10),
+grade VARCHAR(15));
