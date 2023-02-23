@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Form,Label,Input,Button,Col,FormGroup,Modal,
     ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
-function Deposit() {
+function Withdraw() {
     const divStyle = {
         width:'600px',height:'270px',textAlign:'left',margin:'100px auto',
         border:'2px solid gray', padding:'30px', borderRadius:'20px'
@@ -23,11 +23,11 @@ function Deposit() {
 
     const submit = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/deposit',{acc:acc});
-            setMessage({header:'입금',body:`잔 액 : ${response.data.res}원`});
+            const response = await axios.post('http://localhost:3001/withdraw',{acc:acc});
+            setMessage({header:'출금',body:`잔 액 : ${response.data.res}원`});
             toggle();
         } catch(err) {
-            setMessage({header:'오류', body:'입금을 실패했습니다.'});
+            setMessage({header:'오류', body:'출금을 실패했습니다.'});
             toggle();
         }
     }
@@ -42,14 +42,14 @@ function Deposit() {
                     </Col>                  
                 </FormGroup>
                 <FormGroup row>
-                    <Label for='money' sm={4}>입&nbsp;&nbsp;&nbsp;금&nbsp;&nbsp;&nbsp;액</Label>
+                    <Label for='money' sm={4}>출&nbsp;&nbsp;&nbsp;금&nbsp;&nbsp;&nbsp;액</Label>
                     <Col sm={8}>
                         <Input type='text' name='money' id='money' value={acc.money} onChange={change}/>
                     </Col>
                 </FormGroup>   
                 <FormGroup row>
                     <Col sm={12}>
-                        <Button style={{width:'100%'}} color='primary' onClick={submit}>입 금</Button>
+                        <Button style={{width:'100%'}} color='primary' onClick={submit}>출 금</Button>
                     </Col>
                 </FormGroup>          
             </Form>
@@ -65,4 +65,4 @@ function Deposit() {
     )    
 }
 
-export default Deposit;
+export default Withdraw;
