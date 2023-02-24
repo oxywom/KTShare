@@ -17,3 +17,5 @@ name VARCHAR(50) NOT NULL,
 balance INTEGER DEFAULT 0,
 type VARCHAR(10),
 grade VARCHAR(15));
+
+https://docs.google.com/forms/d/1tRVQagfE7QQ4v_jHzgNW9v13A95L6ce3sVn8ha_yvug/edit?ts=63f86dd7
